@@ -25109,8 +25109,8 @@ Floated Menu / Item
 
 .ui.menu .blue.active.item,
 .ui.blue.menu .active.item {
-  border-color: #2185D0 !important;
-  color: #2185D0 !important;
+  border-color: #0A0861 !important;
+  color: #0A0861 !important;
 }
 
 .ui.menu .violet.active.item,
@@ -25370,7 +25370,7 @@ Floated Menu / Item
 
 .ui.inverted.menu .blue.active.item,
 .ui.inverted.blue.menu {
-  background-color: #2185D0;
+  background-color: #0A0861;
 }
 
 .ui.inverted.blue.menu .item:before {
