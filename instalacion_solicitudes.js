@@ -12,4 +12,13 @@ $(document).ready(function(){
 		$(activeTab).show();
 		return false;
 	});
+
+	$('button').click(function(){
+		$('.secciones article').hide();
+
+		var activeBut = $(this).attr('href');
+		$(activeBut).show();
+		return false;
+	});
+
 });
