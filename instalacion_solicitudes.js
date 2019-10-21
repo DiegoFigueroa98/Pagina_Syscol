@@ -14,10 +14,14 @@ $(document).ready(function(){
 	});
 
 	$('button').click(function(){
-		$('.secciones article').hide();
-
-		var activeBut = $(this).attr('href');
-		$(activeBut).show();
+		if ($(this).text() === "Cancelar") {
+			$('.secciones article').hide();
+			$('.secciones article:first').show();
+		}else{
+			$('.secciones article').hide();
+			var activeBut = $(this).attr('href');
+			$(activeBut).show();
+		}
 		return false;
 	});
 
