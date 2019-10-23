@@ -1,8 +1,10 @@
 $(document).ready(function(){
+	//Mostrar únicamente la primera sección de la navegación de pestañas
 	$('ul.tabs li a:first').addClass('active');
 	$('.secciones article').hide();
 	$('.secciones article:first').show();
 
+	//Funcionalidades de la navegación de pestañas
 	$('ul.tabs li a').click(function(){
 		$('ul.tabs li a').removeClass('active');
 		$(this).addClass('active');
@@ -11,8 +13,10 @@ $(document).ready(function(){
 		var activeTab = $(this).attr('href');
 		$(activeTab).show();
 		return false;
+
 	});
 
+	//Funcionalidad de los botones en general
 	$('button').click(function(){
 		if ($(this).text() === "Cancelar") {
 			$('.secciones article').hide();
@@ -22,6 +26,23 @@ $(document).ready(function(){
 			var activeBut = $(this).attr('href');
 			$(activeBut).show();
 		}
+		return false;
+	});
+
+	//Cambiar de sección dependiendo de la opción seleccionada de un listbox
+	var select = document.getElementById('solicitud');
+	select.addEventListener('change',
+	function(){
+		switch($(this).val()) {
+			case "0":
+				$('#solicitudes_normales').hide();
+				$('#solicitudes_primera_vez').show();
+			  break;
+			case "1":
+				$('#solicitudes_primera_vez').hide();
+				$('#solicitudes_normales').show();
+			  break;
+		  }
 		return false;
 	});
 

@@ -30,73 +30,72 @@
             <br><br><br>
             <div class="wrap">
                 <ul class="tabs">
-                    <li><a href="#tab1"><span class="tab-text">Solicitudes</span></a></li>
-                    <li><a href="#tab2"></span><span class="tab-text">Clientes</span></a></li>
-                    <li><a href="#tab3"></span><span class="tab-text">Inmuebles</span></a></li>
+                    <li><a href="#solicitudes"><span class="tab-text">Solicitudes</span></a></li>
+                    <li><a href="#clientes"></span><span class="tab-text">Clientes</span></a></li>
+                    <li><a href="#inmuebles"></span><span class="tab-text">Inmuebles</span></a></li>
                 </ul>
                 
                 <!-- Contenido de la sección solicitudes -->
                 <div class="secciones">
-                    <article id="tab1">
+                    <article id="solicitudes">
+                        <!-- Segmentos de la sección de solicitudes -->
                         <div class="ui segment">
-                            <!-- Segmentos de la sección de solicitudes -->
                             <h3 class="ui left aligned header">
-                                Solicitudes de primera vez
+                                Registrar solicitud
                                 <!-- Botón de cada segmento -->
-                                <button href="#frame_solicitudes_primeravez" class="ui right floated primary button ">
-                                    Agregar
+                                <button href="#registrar_solicitud" class="ui right floated primary button ">
+                                    Registrar
                                 </button>
                             </h3>
                             <p></p>
                         </div>
+
                         <div class="ui segment">
                             <h3 class="ui left aligned header">
-                                Solicitudes normales
-                                <button class="ui right floated primary button "">
-                                    Agregar
+                                Reporte de solicitudes pendientes
+                                <button href="#" class="ui right floated primary button "">
+                                    Mostrar
                                 </button>
                             </h3>
                             <p></p>
                         </div>
+
                         <div class="ui segment">
                             <h3 class="ui left aligned header">
-                                Solicitudes de primera vez pendientes
+                                Reporte de solicitudes atendidas
                                 <button class="ui right floated primary button "">
-                                    Agregar
+                                    Mostrar
                                 </button>
                             </h3>
                             <p></p>
                         </div>
-                        <div class="ui segment">
-                            <h3 class="ui left aligned header">
-                                Solicitudes normales pendientes
-                                <button class="ui right floated primary button "">
-                                    Agregar
-                                </button>
-                            </h3>
-                            <p></p>
-                        </div>
-                        <div class="ui segment">
-                            <h3 class="ui left aligned header">
-                                Solicitudes atendidas
-                                <button class="ui right floated primary button "">
-                                    Agregar
-                                </button>
-                            </h3>
-                            <p></p>
-                        </div>
+                    
+                    <!-- Contenido de la sección clientes -->
                     </article>
-                    <article id="tab2">
+                    <article id="clientes">
                         <h1>Clientes</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel voluptates unde, consequuntur aliquid architecto rem numquam expedita minima dolorem pariatur recusandae, eius quod quia aspernatur id impedit, tenetur! Aspernatur incidunt molestiae dolores animi ea praesentium ipsam tenetur voluptas cupiditate perspiciatis eum nihil, natus exercitationem libero earum fuga dignissimos impedit numquam, quasi, placeat officiis voluptates, ad reprehenderit fugiat? Fugiat aperiam et magni, molestiae, numquam consectetur vitae sapiente cupiditate totam laboriosam voluptate obcaecati, aliquam placeat? Suscipit dolores fuga laudantium sed, qui magni iusto dolore quia. Quis fugit exercitationem porro. Rerum nihil omnis recusandae ratione fuga alias eligendi, earum sunt veritatis praesentium eum perspiciatis. Molestias deserunt, iure neque animi quod! Impedit reprehenderit cumque, numquam velit quae cum eius quidem similique laudantium hic deleniti!</p>
                     </article>
-                    <article id="tab3">
+                    <article id="inmuebles">
                         <h1>Inmuebles</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea numquam odio voluptate. Aliquam incidunt similique, et quasi ducimus quos aut autem non dignissimos dicta sit provident, voluptatibus ut blanditiis perspiciatis cum, vel temporibus minima enim. Asperiores omnis placeat officiis a tenetur sit recusandae, reprehenderit neque. Tempora quibusdam, perferendis id ratione culpa dolorum! Nemo, animi?</p><br>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum dignissimos at esse, ipsum rerum assumenda nisi obcaecati! Aliquam iure voluptatem incidunt, explicabo sit labore, perferendis eius ad vel quia. Praesentium, doloribus. Quisquam provident nostrum totam itaque debitis, minima, tempore dolores!</p>
                     </article>
+
+                    <!-- Contenido de la sección de registrar solicitud -->
+                    <article id="registrar_solicitud">
+                        <div class="four wide field">
+                            <label>Tipo de solicitud</label>
+                            <select id="solicitud">
+                                <option selected="true" disabled="disabled">Elija una opción</option>
+                                <option value="0">Primera vez</option>
+                                <option value="1">Normal</option>
+                            </select>
+                        </div>                      
+                    </article>
+
                     <!-- Formulario para las solicitudes de primera vez -->
-                    <article id="frame_solicitudes_primeravez">
+                    <article id="solicitudes_primera_vez">
                         <div class="ui form"> 
                             <h4 class="ui dividing header">Agregar solicitud de primera vez</h4>                  
                             <div class="field">
@@ -114,6 +113,50 @@
                             <div class="two wide field">
                                 <label>Hora de visita</label>
                                 <input type="text" placeholder="24:00">
+                            </div> 
+                            <br>
+                            <button class="ui red submit button ">Cancelar</button>
+                            <button class="ui blue submit button ">Aceptar</button>     
+                        </div>
+                    </article>
+
+                    <!-- Formulario para las solicitudes normales -->
+                    <article id="solicitudes_normales">
+                        <div class="ui form"> 
+                            <h4 class="ui dividing header">Agregar solicitud normal</h4>                  
+                            <div class="three wide field">
+                                <label>Número de cliente</label>
+                                <select>
+                                    <option selected="true" disabled="disabled">Número</option>
+                                </select>
+                            </div>
+                            <div class="four wide field">
+                                <label>Servicio</label>
+                                <select>
+                                    <option selected="true" disabled="disabled">Elija una servicio</option>
+                                    <option value="0">1</option>
+                                    <option value="1">2</option>
+                                </select>
+                            </div>
+                            <div class="three wide field">
+                                <label>Fecha de visita</label>
+                                <div class="ui calendar" id="example2">
+                                    <div class="ui input left icon">
+                                    <i class="calendar icon"></i>
+                                    <input type="text" placeholder="Fecha">
+                                    </div>
+                                </div>
+                                <br/>
+                            </div>     
+                            <div class="two wide field">
+                                <label>Hora de visita</label>
+                                <div class="ui calendar" id="example3">
+                                    <div class="ui input left icon">
+                                    <i class="time icon"></i>
+                                    <input type="text" placeholder="Hora">
+                                    </div>
+                                </div>
+                                <br/>
                             </div> 
                             <br>
                             <button class="ui red submit button ">Cancelar</button>
