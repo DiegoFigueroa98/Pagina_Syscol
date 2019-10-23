@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="main.css">
     
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="instalacion_solicitudes.js"></script>
         <script src="solicitudes_pv_p.js"></script>
 
         <!--Usados para el modal-->
@@ -32,10 +31,11 @@
             <a href="reportes.html" class="item">Reportes</a>
             <a href="pendientes.html" class="item">Pendientes</a>
         </div>
-        <!-- Tabla se solicitudes de primera vez pendientes -->
+
+        <!-- Tabla se solicitudes pendientes -->
         <div class="centrado">
             <br>
-            <h1 class="ui center aligned header">Solicitudes de primera vez pendientes</h1>
+            <h1 class="ui center aligned header">Solicitudes pendientes</h1>
             <br>
             <div class="secciones">
                 <article id="tab1">
@@ -69,8 +69,11 @@
                                     </tbody>
                                 </table>
                             </div>
+
+                            <!-- Columna donde están los botones -->
                             <div class="two wide column">
                                 <div class="ui vertical labeled icon buttons">
+                                    <!-- Botones para realizar acciones con cada elemento de la tabla -->
                                     <button class="ui button" href="#proceder">
                                         <i class="large angle double right icon"></i>
                                         Proceder
