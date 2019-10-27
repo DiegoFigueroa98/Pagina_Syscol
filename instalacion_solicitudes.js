@@ -6,6 +6,8 @@ $(document).ready(function(){
 
 	//Funcionalidades de la navegación de pestañas
 	$('ul.tabs li a').click(function(){
+		$('#solicitud').val('0');
+		$('#solicitud_pendiente').val('0');
 		$('ul.tabs li a').removeClass('active');
 		$(this).addClass('active');
 		$('.secciones article').hide();
@@ -16,17 +18,29 @@ $(document).ready(function(){
 
 	});
 
+
+
 	//Funcionalidad de los botones en general
 	$('button').click(function(){
-		if ($(this).text() === "Cancelar") {
-			$('.secciones article').hide();
-			$('.secciones article:first').show();
-		}else{
-			$('.secciones article').hide();
-			var activeBut = $(this).attr('href');
-			$(activeBut).show();
+		switch($(this).attr('id')){
+			case "boton_detalle":
+				$('#detalle').modal('show');
+			break;
+			case "boton_borrar":
+				$('#borrar').modal('show');
+			break;
+			default:
+				if ($(this).text() === "Cancelar" || $(this).text() === "Regresar" ) {
+					$('.secciones article').hide();
+					$('.secciones article:first').show();
+				}else{
+					$('.secciones article').hide();
+					var activeBut = $(this).attr('href');
+					$(activeBut).show();
+				}
+				return false;
+			break;
 		}
-		return false;
 	});
 
 	//Cambiar de sección dependiendo de la opción seleccionada de un listbox
